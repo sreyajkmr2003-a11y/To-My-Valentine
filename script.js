@@ -1,14 +1,17 @@
+// CONNECT ELEMENTS
 const envelopeContainer = document.getElementById("envelope-container");
 const letterContainer = document.getElementById("letter-container");
 const letterWindow = document.querySelector(".letter-window");
+
 const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
+
 const letterTitle = document.getElementById("letter-title");
 const letterCat = document.getElementById("letter-cat");
 const letterButtons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
 
-// Open letter
+// OPEN LETTER
 envelopeContainer.addEventListener("click", () => {
   envelopeContainer.style.display = "none";
   letterContainer.style.display = "flex";
@@ -18,26 +21,22 @@ envelopeContainer.addEventListener("click", () => {
   }, 50);
 });
 
-// Move NO button
-const moveNoBtn = () => {
-  const distance = 150;
-  const angle = Math.random() * Math.PI * 2;
+// YES BUTTON
+yesBtn.addEventListener("click", () => {
+  letterTitle.textContent = "I knew you’d say YES 😘💕";
+  letterCat.src = "cosytales-cute.gif";
 
-  const x = Math.cos(angle) * distance;
-  const y = Math.sin(angle) * distance;
+  letterButtons.style.display = "none";
+  finalText.style.display = "block";
+  letterWindow.classList.add("final");
+});
 
+// NO BUTTON (RUN AWAY 😈)
+const moveNo = () => {
+  const x = Math.random() * 200 - 100;
+  const y = Math.random() * 200 - 100;
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
 };
 
-noBtn.addEventListener("mouseover", moveNoBtn);
-noBtn.addEventListener("touchstart", moveNoBtn);
-
-// YES clicked
-yesBtn.addEventListener("click", () => {
-  title.textContent = "I knew you’d say YES 😁😘💕";
-  catImg.src = "cosytales-cute.gif";
-
-  letterWindow.classList.add("final");
-  buttons.style.display = "none";
-  finalText.style.display = "block";
-});
+noBtn.addEventListener("mouseover", moveNo);
+noBtn.addEventListener("touchstart", moveNo); // mobile support
