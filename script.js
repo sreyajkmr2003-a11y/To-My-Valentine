@@ -18,19 +18,26 @@ envelopeContainer.addEventListener("click", () => {
   }, 50);
 });
 
-// YES button
-yesBtn.addEventListener("click", () => {
-  letterTitle.textContent = "Yayyy 💖";
-  letterCat.src = "cosytales-cute.gif";
-  letterButtons.style.display = "none";
-  finalText.style.display = "block";
-  letterWindow.classList.add("final");
-});
+// Move NO button
+const moveNoBtn = () => {
+  const distance = 150;
+  const angle = Math.random() * Math.PI * 2;
 
-// NO button (moves away)
-noBtn.addEventListener("mouseover", () => {
-  const x = Math.random() * 200 - 100;
-  const y = Math.random() * 200 - 100;
+  const x = Math.cos(angle) * distance;
+  const y = Math.sin(angle) * distance;
+
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
-});
+};
 
+noBtn.addEventListener("mouseover", moveNoBtn);
+noBtn.addEventListener("touchstart", moveNoBtn);
+
+// YES clicked
+yesBtn.addEventListener("click", () => {
+  title.textContent = "I knew you’d say YES 😁😘💕";
+  catImg.src = "cosytales-cute.gif";
+
+  letterWindow.classList.add("final");
+  buttons.style.display = "none";
+  finalText.style.display = "block";
+});
