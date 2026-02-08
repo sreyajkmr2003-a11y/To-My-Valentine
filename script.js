@@ -4,7 +4,7 @@ const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
 
 const title = document.getElementById("letter-title");
-const catImg = document.getElementById("letter-cat");
+const catVideo = document.getElementById("letter-cat");
 const buttons = document.getElementById("letter-buttons");
 const finalText = document.getElementById("final-text");
 const letterWindow = document.querySelector(".letter-window");
@@ -21,7 +21,7 @@ envelope.addEventListener("click", () => {
 
 // Move NO button
 const moveNoBtn = () => {
-  const distance = 100;
+  const distance = 250;
   const angle = Math.random() * Math.PI * 2;
 
   const x = Math.cos(angle) * distance;
@@ -36,11 +36,15 @@ noBtn.addEventListener("touchstart", moveNoBtn);
 // YES clicked
 yesBtn.addEventListener("click", () => {
   title.textContent = "I knew you’d say YES 😁😘💕";
-  catImg.src = "cosytales-cute.gif";
+
+  // Change cat video
+  catVideo.innerHTML = `
+    <source src="cat-happy.mp4" type="video/mp4">
+  `;
+  catVideo.load();
+  catVideo.play();
 
   letterWindow.classList.add("final");
   buttons.style.display = "none";
   finalText.style.display = "block";
 });
-
-
