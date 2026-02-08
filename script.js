@@ -21,7 +21,7 @@ envelope.addEventListener("click", () => {
 
 // Move NO button
 const moveNoBtn = () => {
-  const distance = 250;
+  const distance = 100;
   const angle = Math.random() * Math.PI * 2;
 
   const x = Math.cos(angle) * distance;
@@ -42,4 +42,5 @@ yesBtn.addEventListener("click", () => {
   buttons.style.display = "none";
   finalText.style.display = "block";
 });
+
 
