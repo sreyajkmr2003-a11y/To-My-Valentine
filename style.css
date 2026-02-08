@@ -7,7 +7,7 @@
 /* Page */
 body {
   height: 100vh;
-  background: #93707b;
+  background: #d7cace;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,8 +21,12 @@ body {
 }
 
 #envelope {
-  width: 260px;
-  border-radius: 12px;
+  width: 400px;
+  transition: transform 0.3s ease;
+}
+
+#envelope-container:hover #envelope {
+  transform: scale(1.08);
 }
 
 #envelope-container p {
@@ -45,13 +49,13 @@ body {
 
 /* Letter window */
 .letter-window {
-  background: white;
+  background: rgb(188, 141, 141);
   padding: 25px;
   border-radius: 16px;
   width: 360px;
   text-align: center;
   transform: scale(0.8);
-  transition: transform 0.4s ease;
+  transition: transform 0.3s ease;
 }
 
 .letter-window.open {
@@ -68,11 +72,10 @@ body {
   margin-bottom: 10px;
 }
 
-/* Cat video */
+/* Cat */
 #letter-cat {
-  width: 200px;
+  width: 280px;
   margin: 15px 0;
-  border-radius: 12px;
 }
 
 /* Buttons */
@@ -86,19 +89,18 @@ body {
 .btn {
   width: 130px;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 .btn:hover {
   transform: scale(1.1);
 }
 
-/* Final message */
+/* Final text */
 #final-text {
   display: none;
   font-size: 18px;
   color: #ff4d6d;
   margin-top: 15px;
+  font-family: 'Poppins', sans-serif;
 }
-
-
