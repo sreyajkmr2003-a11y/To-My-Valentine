@@ -21,7 +21,7 @@ envelopeContainer.addEventListener("click", () => {
 // YES button
 yesBtn.addEventListener("click", () => {
   letterTitle.textContent = "Yayyy 💖";
-  letterCat.src = "milk-and-mocha-hugs.gif";
+  letterCat.src = "cosytales-cute.gif";
   letterButtons.style.display = "none";
   finalText.style.display = "block";
   letterWindow.classList.add("final");
@@ -33,3 +33,4 @@ noBtn.addEventListener("mouseover", () => {
   const y = Math.random() * 200 - 100;
   noBtn.style.transform = `translate(${x}px, ${y}px)`;
 });
+
