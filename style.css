@@ -22,7 +22,7 @@ body {
 
 #envelope {
   width: 260px;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 #envelope-container:hover #envelope {
@@ -56,7 +56,7 @@ body {
   max-width: 360px;
   text-align: center;
   transform: scale(0.8);
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 .letter-window.open {
@@ -91,7 +91,7 @@ body {
 .btn {
   width: 120px;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 .btn:hover {
@@ -105,4 +105,5 @@ body {
   color: #ff4d6d;
   margin-top: 15px;
 }
+
 
